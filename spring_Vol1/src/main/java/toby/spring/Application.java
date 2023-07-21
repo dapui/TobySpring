@@ -2,9 +2,12 @@ package toby.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import toby.spring.dao.ConnectionMaker;
+import toby.spring.dao.DConnectionMaker;
 import toby.spring.dao.UserDao;
 import toby.spring.domain.User;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 @SpringBootApplication
@@ -16,8 +19,8 @@ public class Application {
 		UserDao dao = new UserDao();
 
 		User user = new User();
-		user.setId("aaa");
-		user.setName("2");
+		user.setId("bbb");
+		user.setName("3");
 		user.setPassword("12345");
 
 		dao.add(user);
